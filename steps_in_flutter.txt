@@ -1,0 +1,11 @@
+Node Sequelize Project Creation Steps
+
+mkdir <project_name>
+cd <project_name>npm
+npm init      ( and enter details for package)
+npm install express sequelize mysql2 cors --save
+code .      (to start the project in VS Code)
+change entry point as server.js in package.json
+create server.js in the root (or copy)
+
+create app and sub folders for model, routes, controllers, services, config
