@@ -1,0 +1,52 @@
+staff :        if( sal >=  10000) 
+			sal = sal+1000;
+		else if(sal>=5000)
+			sal=sal+500;
+		else
+			sal=sal+250;
+		
+		print(sal)
+
+
+if(dno==1)
+  {
+   print("sunday");
+  }
+else if(dno==2)
+  {
+   print("monday");
+  }
+else if(dno==3)
+  {
+   print("tuesday");
+  }
+else if(dno==4)
+  {
+   print("wednesday");
+  }
+....
+
+...
+else
+{
+print("invalid");
+}
+
+
+
+switch(pageName)
+{
+case "home":
+   print("sunday");
+   break;
+case "counter":
+ print("monday");
+   break;
+.
+.
+.
+
+default :
+print("invalid");
+
+}

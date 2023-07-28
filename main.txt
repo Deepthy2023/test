@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+
+import 'counter.dart';
+
+void main() {
+  runApp(const TrainingApp());
+}
+
+class TrainingApp extends StatefulWidget {
+  const TrainingApp({super.key});
+
+  @override
+  State<TrainingApp> createState() => _TrainingAppState();
+}
+
+class _TrainingAppState extends State<TrainingApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Sample App',
+      theme: ThemeData(primarySwatch: Colors.green),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Row(
+            children: [
+              const Text("Myfirst page"),
+              const Spacer(),
+              ElevatedButton(
+                  onPressed: () {
+                    print("ElevatedButton pressed....");
+                  },
+                  child: const Text("plus")),
+              const SizedBox(
+                width: 5,
+              ),
+            ],
+          ),
+        ),
+        body: const CounterWidget(),
+      ),
+    );
+  }
+}

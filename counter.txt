@@ -1,0 +1,70 @@
+import 'package:flutter/material.dart';
+
+class CounterWidget extends StatefulWidget {
+  const CounterWidget({super.key});
+
+  @override
+  State<CounterWidget> createState() => _CounterWidgetState();
+}
+
+class _CounterWidgetState extends State<CounterWidget> {
+  int count = 0;
+  String label1 = "Below given the current count";
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Text(
+            label1,
+            style: const TextStyle(
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.cyan),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(50.0),
+          child: Text(
+            count.toString(),
+            style: const TextStyle(
+                fontSize: 40, fontWeight: FontWeight.bold, color: Colors.red),
+          ),
+        ),
+        const SizedBox(
+          height: 5,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FloatingActionButton(
+              onPressed: () {
+                setState(() {
+                  count++;
+                });
+              },
+              child: Row(
+                children: const [
+                  Icon(Icons.add),
+                  Text("Add"),
+                ],
+              ),
+            ),
+            const SizedBox(
+              width: 15,
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                setState(() {
+                  count = 0;
+                });
+              },
+              child: const Icon(Icons.restore),
+            )
+          ],
+        )
+      ],
+    ));
+  }
+}

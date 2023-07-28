@@ -1,0 +1,24 @@
+Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FloatingActionButton(
+                  onPressed: () {
+                    setState(() {
+                      count = 0;
+                    });
+                  },
+                  child: const Icon(Icons.restore),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                FloatingActionButton(
+                  onPressed: () {
+                    setState(() {
+                      count++;
+                    });
+                  },
+                  child: const Icon(Icons.add),
+                ),
+              ],
+            ),
